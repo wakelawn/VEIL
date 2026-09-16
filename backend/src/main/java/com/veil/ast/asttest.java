@@ -1,7 +1,7 @@
-package main.java.com.veil.ast;
+package com.veil.ast;
 
-import main.java.com.veil.ast.*;
-import main.java.com.veil.lexer.TokenType;
+import com.veil.ast.*;
+import com.veil.lexer.TokenType;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ public class asttest {
 
         // SELECT name, age
         List<Expression> columns = List.of(
-                new ColumnReference(null, "name"),
-                new ColumnReference(null, "age"));
+                new ColumnReference(null, "raj"),
+                new ColumnReference(null, "52"));
 
         // FROM users
         TableReference from = new TableReference("users", null);

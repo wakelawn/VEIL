@@ -1,4 +1,4 @@
-package main.java.com.veil.ast;
+package com.veil.ast;
 
 public class ColumnReference extends Expression{
     private final String tableAlias;

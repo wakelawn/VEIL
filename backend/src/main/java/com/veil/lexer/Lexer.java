@@ -1,4 +1,4 @@
-package main.java.com.veil.lexer;
+package com.veil.lexer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +23,8 @@ public class Lexer {
                 continue;
             }
             // indentifiers and SQL keywords
-            if (Character.isLetter(current)) {
-                tokens.add(readWord());// readword() will be defined later
+            if (Character.isLetter(current) || current == '_') {
+                tokens.add(readWord());
                 continue;
             }
 
@@ -62,6 +62,11 @@ public class Lexer {
                     position++;
                     break;
 
+                case '.':
+                    tokens.add(new Token(TokenType.DOT, ".", position));
+                    position++;
+                    break;
+
                 default:
                     throw new RuntimeException(
                             "Unexpected character '" +
@@ -71,6 +76,7 @@ public class Lexer {
             }
 
         }
+        tokens.add(new Token(TokenType.EOF, "", position));
 
         return tokens;
     }
@@ -90,10 +96,67 @@ public class Lexer {
 
     private Token readWord() {
         int start = position;
-        while (position < input.length() && Character.isLetterOrDigit(input.charAt(position))) {
+        while (position < input.length()
+                && (Character.isLetterOrDigit(input.charAt(position)) || input.charAt(position) == '_')) {
             position++;
         }
         String word = input.substring(start, position);
-        return new Token(TokenType.IDENTIFIER, word, ~start);
+        TokenType type = TokenType.IDENTIFIER;
+        switch (word.toUpperCase()) {
+            case "SELECT":
+                type = TokenType.SELECT;
+                break;
+            case "FROM":
+                type = TokenType.FROM;
+                break;
+            case "WHERE":
+                type = TokenType.WHERE;
+                break;
+            case "AND":
+                type = TokenType.AND;
+                break;
+            case "OR":
+                type = TokenType.OR;
+                break;
+            case "GROUP":
+                type = TokenType.GROUP;
+                break;
+            case "BY":
+                type = TokenType.BY;
+                break;
+            case "ORDER":
+                type = TokenType.ORDER;
+                break;
+            case "ASC":
+                type = TokenType.ASC;
+                break;
+            case "DESC":
+                type = TokenType.DESC;
+                break;
+            case "JOIN":
+                type = TokenType.JOIN;
+                break;
+
+            case "ON":
+                type = TokenType.ON;
+                break;
+
+            case "LEFT":
+                type = TokenType.LEFT;
+                break;
+
+            case "RIGHT":
+                type = TokenType.RIGHT;
+                break;
+
+            case "FULL":
+                type = TokenType.FULL;
+                break;
+
+            case "INNER":
+                type = TokenType.INNER;
+                break;
+        }
+        return new Token(type, word, start);
     }
 }

@@ -1,4 +1,4 @@
-package main.java.com.veil.lexer;
+package com.veil.lexer;
 
 public class Token {
     private final int position;

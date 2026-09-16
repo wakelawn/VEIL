@@ -1,4 +1,4 @@
-package main.java.com.veil.ast;
+package com.veil.ast;
 
 import java.util.List;
 

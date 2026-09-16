@@ -1,6 +1,6 @@
-package main.java.com.veil.ast;
+package com.veil.ast;
 
-import main.java.com.veil.lexer.TokenType;
+import com.veil.lexer.TokenType;
 
 public class BinaryExpression extends Expression {
 

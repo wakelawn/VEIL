@@ -1,4 +1,4 @@
-package main.java.com.veil.ast;
+package com.veil.ast;
 
 public class TableReference implements ASTNode {
 
@@ -10,7 +10,7 @@ public class TableReference implements ASTNode {
         this.alias = alias;
     }
 
-    public String getTablename() {
+    public String getTableName() {
         return tablename;
     }
 

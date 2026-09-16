@@ -1,4 +1,4 @@
-package main.java.com.veil.optimizer;
+package com.veil.optimizer;
 
 public class Optimizer {
     

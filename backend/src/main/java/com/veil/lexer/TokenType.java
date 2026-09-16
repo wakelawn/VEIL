@@ -1,4 +1,4 @@
-package main.java.com.veil.lexer;
+package com.veil.lexer;
 
 public enum TokenType {
     // SELECT → SELECT
@@ -11,6 +11,7 @@ public enum TokenType {
     // 18 → NUMBER
     // ; → SEMICOLON
 
+    // keyword
     SELECT,
     FROM,
     WHERE,
@@ -19,17 +20,40 @@ public enum TokenType {
     NUMBER,
     STRING,
 
+    // conditional
     GREATER_THAN,
     EQUALS,
     LESS_THAN,
     COMMA,
     SEMICOLON,
 
+    // logicals
     AND,
     OR,
+    DOT,
+
+    // arithmatic
     PLUS,
     MINUS,
     MULTIPLY,
     DIVIDE,
+
+    // aggregrate function
+    GROUP,
+    BY,
+    ORDER,
+    ASC,
+    DESC,
+
+    // joints
+    JOIN,
+    ON,
+    LEFT,
+    RIGHT,
+    FULL,
+    INNER,
+
+    // end of file
+    EOF
 
 }
