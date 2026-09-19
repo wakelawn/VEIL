@@ -1,0 +1,30 @@
+
+.veil-input-section{
+  padding: 1.5rem;
+}
+
+.veil-textarea {
+  width: 635px;
+  flex: 1;
+  min-height: 300px;
+  line-height: 1.6;
+  
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(100, 150, 255, 0.3);
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  
+  resize: none;
+  outline: none;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.veil-textarea:focus{
+    border-color: rgba(100, 150, 255, 0.8);
+    background: rgba(100, 150, 255, 0.05);
+}
+

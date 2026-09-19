@@ -1,0 +1,18 @@
+/*HEADER LAYER*/
+
+.veil-header{
+    background: rgba(0, 0 , 0, 0.5) ;
+    border-bottom: 1px solid(225,255,255,0.1) ;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.veil-status-dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    animation: pulse 2s infinite;
+}

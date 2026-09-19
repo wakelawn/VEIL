@@ -1,0 +1,38 @@
+.veil-tabs {
+  display: flex;                                               
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);         
+  padding: 0 1.5rem;
+}
+
+.veil-tab {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  position: relative;                                         
+}
+
+.veil-tab:hover {
+  color: #999;                                                
+}
+
+.veil-tab.active {
+  color: #6495ff;     
+}                                        
+
+.veil-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #6495ff;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.veil-tab:hover::after {
+  opacity: 1;
+}                                 

@@ -1,72 +1,45 @@
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/*ROOT LAYER*/
 
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
-    background-color: #1B1725;
-    color: #534B62;
-
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0f0f1a;
 }
 
-
-.code-input{
-    width: 720px;
-    height: 390px;
-    resize: none;
-    border:solid red 5px ;
-}
-
-nav {
-            display: flex;
-            gap: 20px;
-            flex: 1;
-            margin-left: 20px;
-            overflow-x: auto;
-            border: 2px solid #D0BCD5;
-            background-color: whitesmoke;
-        }
- 
-
-
-
-nav h2{
+.veil-container{
+    color:aliceblue;
     display: flex;
-    padding: 10px;
-    margin: 10px;
-    height: 50px;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.veil-logo{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    font-size:x-large;
+
+}
+
+.veil-panel{
+    background: linear-gradient(135deg, #0f0f1a 0% , #1a2a2e 100%);
+    color: #e0e0e0;
+    height: 100%;
     width: 100%;
-    background-color:whitesmoke ;
-    color: #1B1725;
-    text-shadow: #534B62;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
-
-
-    
-
+    display: flex;
+    flex-direction: row;
+    padding: 0;
 }
-
-.editor-area {
-            flex: 1;
-            padding: 30px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-.analyze-btn{
-    width: 100px;
-    height: 38px;
-    border:solid white 2px
-    border-radius: 15px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #534B62;
-    color: white;
-}
-
