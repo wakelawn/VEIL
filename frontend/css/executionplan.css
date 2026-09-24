@@ -1,0 +1,18 @@
+.veil-plan-node{
+    margin-bottom: 10px;
+    padding:10px;
+    border: 1px solid rgba(100, 150, 255, 0.1);
+    background: rgba(100, 150, 255, 0.1);
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.veil-plan-node-title{
+    color: #6495ff;
+    font-size: medium;
+}
+
+.veil-plan-node-detail{
+    font-size: smaller;
+}
+

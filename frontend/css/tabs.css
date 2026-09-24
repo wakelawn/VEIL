@@ -33,6 +33,13 @@
   transition: opacity 0.2s ease;
 }
 
-.veil-tab:hover::after {
+.veil-tab.active::after {
   opacity: 1;
-}                                 
+}
+
+.veil-tab-content{
+  display: none;
+}
+.veil-tab-content.active{
+  display: block;
+}
